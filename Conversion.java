@@ -2,17 +2,26 @@
    Partner Lab
    Description: This program uses method and use input to covert either reals to dollars or dollars to reals.
    @author Charlie Kavich
-   @since 09-18-25]
+   @since 09-18-25
 */
 import java.util.Scanner;
 
 public class Conversion{
     private static final double DOLLAR_REAL_RATIO = 5.45;
     private static final double DOLLAR_YEN_RATIO = 147.32;
+
+    /**
+   This method donverts USD to BRZ
+   @param USD
+    */
     public static double dollarToReal(double quant)
     {
         return quant * DOLLAR_REAL_RATIO;
     }
+    /**
+   This method donverts BRZ to USD
+   @param BRZ
+    */
     public static double realToDollar(double quant)
     {
         return quant / DOLLAR_REAL_RATIO;
