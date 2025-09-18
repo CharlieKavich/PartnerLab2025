@@ -12,7 +12,7 @@ public class Conversion{
 
     /**
    This method donverts USD to BRZ
-   @param USD
+   @param USD Is the inputted quantity of USD to convert
     */
     public static double dollarToReal(double quant)
     {
@@ -20,7 +20,7 @@ public class Conversion{
     }
     /**
    This method donverts BRZ to USD
-   @param BRZ
+   @param BRZ Is the inputted quantity of BRZ to convert
     */
     public static double realToDollar(double quant)
     {
