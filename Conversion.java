@@ -28,28 +28,34 @@ public class Conversion{
     }    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Type 1 to convert USD to BRZ, Type 2 to convert BRZ to USD.");
+        
+        int userIn = 1000;
+            while(userIn != 3) {
+            System.out.println("Type 1 to convert USD to BRZ, Type 2 to convert BRZ to USD. \n If you would like to quit type 3");
 
-        int userIn = in.nextInt();
-        
-        while ((userIn != 1 && userIn !=2))
-        {   
-            System.out.println("The value entered does not correlate with the provided options, please input either 1 or 2");
             userIn = in.nextInt();
-        }
-        
-        switch (userIn) {
-            case 1:
-                System.out.println("How much USD would you like to convert?");
-                double usd = in.nextDouble();
-                System.out.printf("%s%.2f%s%n", "That is ", dollarToReal(usd), " Reals.");
-                in.close();
-                break;
-            default:
-                System.out.println("How much BRZ would you like to convert?");
-                double brz = in.nextDouble();
-                System.out.printf("%s%.2f%s%n", "That is ", realToDollar(brz), " Dollars.");
-                in.close();
+
+            while ((userIn != 1 && userIn !=2 && userIn != 3))
+            {   
+                System.out.println("The value entered does not correlate with the provided options, please input either 1 or 2");
+                userIn = in.nextInt();
+            }
+            
+            switch (userIn) {
+                case 1:
+                    System.out.println("How much USD would you like to convert?");
+                    double usd = in.nextDouble();
+                    System.out.printf("%s%.2f%s%n", "That is ", dollarToReal(usd), " Reals.");
+                    break;
+                case 2:
+                    System.out.println("How much BRZ would you like to convert?");
+                    double brz = in.nextDouble();
+                    System.out.printf("%s%.2f%s%n", "That is ", realToDollar(brz), " Dollars.");
+                    break;
+                default:
+                    System.out.println("Goodbye!");
+                    in.close();
+            }
         }
     }
 }
