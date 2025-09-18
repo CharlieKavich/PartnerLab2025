@@ -38,7 +38,6 @@ public class Conversion{
                 System.out.println("How much BRZ would you like to convert?");
                 double brz = in.nextDouble();
                 System.out.printf("%s%.2f%s%n", "That is ", realToDollar(brz), " Dollars.");
-                break;
         }
     }
 }
