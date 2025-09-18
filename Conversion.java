@@ -31,7 +31,8 @@ public class Conversion{
         System.out.println("Type 1 to convert USD to BRZ, Type 2 to convert BRZ to USD.");
 
         int userIn = in.nextInt();
-        while (userIn != 1 && userIn !=2)
+        
+        while ((userIn != 1 && userIn !=2))
         {   
             System.out.println("The value entered does not correlate with the provided options, please input either 1 or 2");
             userIn = in.nextInt();
@@ -42,11 +43,13 @@ public class Conversion{
                 System.out.println("How much USD would you like to convert?");
                 double usd = in.nextDouble();
                 System.out.printf("%s%.2f%s%n", "That is ", dollarToReal(usd), " Reals.");
+                in.close();
                 break;
             default:
                 System.out.println("How much BRZ would you like to convert?");
                 double brz = in.nextDouble();
                 System.out.printf("%s%.2f%s%n", "That is ", realToDollar(brz), " Dollars.");
+                in.close();
         }
     }
 }
